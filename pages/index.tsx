@@ -88,7 +88,7 @@ const Home: NextPage = () => {
 
 
   // Functions
-  const isLoading = () => account == null || contractFT == null || contractFTS == null || tokensSold == null || transactionCount == null || ethFunds == null || YTtoETH == null;
+  const isLoading = () => account == null || contractFT == null || contractFTS == null || tokensSold == null || transactionCount == null || ethFunds == null || FTtoETH == null;
   const SliderValue = () => {
     const bigInt = 750000000 * 10**18;
     const r = ((tokensSold * 100) / bigInt);
@@ -162,7 +162,7 @@ const Home: NextPage = () => {
       {/* Mobile */}
       <HStack w='full' display={{lg: 'none', md: 'none', sm: 'flex', base: 'flex'}}>
         <Box w='5px'/>
-        <Heading size='md'>1YT = 1 USD = {FTtoETH} ETH</Heading>
+        <Heading size='md'>1FT = 1 USD = {FTtoETH} ETH</Heading>
         <Spacer/>
         <Link href='https://faucets.chain.link/' isExternal>
           <Button bg='gray.600' color='gray.200' variant='link' w='100px' minH='40px'>Get ETH</Button>
@@ -188,7 +188,7 @@ const Home: NextPage = () => {
           <SliderTrack bg={sliderBG} h='25px' borderRadius={8}>
             <SliderFilledTrack bg={filled}/>
             <Center>
-              <Text>{Number(tokensSold).toFixed()} / 750.000.000 YT</Text>
+              <Text>{Number(tokensSold).toFixed()} / 750.000.000 FT</Text>
             </Center>
           </SliderTrack>
         </Slider>
